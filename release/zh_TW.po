@@ -5531,7 +5531,7 @@ msgid "Night"
 msgstr "夜晚"
 
 msgid "Clear"
-msgstr "晴朗"
+msgstr "清除"
 
 msgid "Rain"
 msgstr "雨天"
