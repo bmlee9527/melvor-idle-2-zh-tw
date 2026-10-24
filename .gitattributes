@@ -1,3 +1,4 @@
 *.bat text eol=crlf
 *.cfg text eol=crlf
 *.po text eol=lf
+*.command text eol=lf
