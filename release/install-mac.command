@@ -1,9 +1,9 @@
 #!/bin/bash
-# Melvor Idle 2 Demo 繁體中文翻譯 - macOS 安裝腳本（實驗性，未經測試）
+# Melvor Idle 2 Demo 繁體中文翻譯 - macOS 安裝腳本
 # 用法：打開「終端機」，輸入 bash 加一個空格，把這個檔案拖進視窗後按 Enter。
 
 cd "$(dirname "$0")" || exit 1
-echo "Melvor Idle 2 Demo - 繁體中文翻譯 安裝程式（Mac 實驗版）"
+echo "Melvor Idle 2 Demo - 繁體中文翻譯 安裝程式（Mac）"
 echo
 
 if [ ! -f "zh_TW.po" ] || [ ! -f "override.cfg" ]; then
@@ -35,7 +35,7 @@ fi
 DEST="$HOME/Library/Application Support/Games By Malcs/Melvor Idle 2"
 mkdir -p "$DEST" && cp -f "zh_TW.po" "$DEST/zh_TW.po" || { echo "[錯誤] 複製翻譯檔失敗。"; exit 1; }
 
-# 尚未確認 Godot 在 Mac 上讀哪個位置的 override.cfg，所以兩個位置都放
+# override.cfg 兩個位置都放（已確認此做法在 Mac 上可用）
 for d in "$APP/Contents/MacOS" "$APP/Contents/Resources"; do
   if [ -d "$d" ]; then
     cp -f "override.cfg" "$d/override.cfg" || echo "[警告] 無法寫入 $d"

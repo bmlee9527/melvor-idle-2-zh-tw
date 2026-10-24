@@ -4,7 +4,7 @@
 
 > ⚠️ 本翻譯為**非官方**玩家作品，與 Games By Malcs 無關。遊戲文字版權屬於原開發者，請勿用於商業用途。
 
-- 適用版本：Melvor Idle 2 Demo `v0.11.2-alpha.4`（Windows / Steam；Mac 為實驗性支援）
+- 適用版本：Melvor Idle 2 Demo `v0.11.2-alpha.4`（Steam，Windows / Mac）
 - 翻譯條目：約 8,350 條（介面、物品、技能、任務對話、戰鬥說明等）
 
 ## 安裝方式
@@ -26,9 +26,9 @@
 
 執行遊戲資料夾裡的 `uninstall.bat`，或手動刪除上面兩個檔案，重開遊戲就會恢復英文。
 
-## Mac 安裝方式（實驗性，未經測試）
+## Mac 安裝方式
 
-> 🧪 作者沒有 Mac，以下步驟是依 Godot 引擎在 macOS 上的運作方式推測的，**尚未確認可用**。如果你試過了，不管成功或失敗，都歡迎到 [Issues](../../issues) 回報，幫助其他 Mac 玩家！
+> ✅ 已有 Mac 玩家回報可以正常使用。遇到問題歡迎到 [Issues](../../issues) 回報。
 
 ### 使用腳本
 
@@ -41,7 +41,7 @@
 
 1. 把 `zh_TW.po` 複製到 `~/Library/Application Support/Games By Malcs/Melvor Idle 2/`（Finder 選單「前往」>「前往資料夾」，貼上這個路徑即可開啟）。
 2. 在 Steam 對遊戲按右鍵 → **管理** → **瀏覽本機檔案**，對遊戲的 `.app` 按右鍵 →「顯示套件內容」。
-3. 把 `override.cfg` 分別複製到 `Contents/MacOS/` 和 `Contents/Resources/`。目前不確定遊戲讀哪一個位置，所以兩邊都放。
+3. 把 `override.cfg` 分別複製到 `Contents/MacOS/` 和 `Contents/Resources/`（兩邊都放，跟安裝腳本的做法一樣）。
 
 ### 可能遇到的問題
 
@@ -81,5 +81,5 @@ Mac 移除方式：用同樣方式執行 `uninstall-mac.command`。
 | `release/override.cfg` | 讓遊戲載入翻譯的設定檔 |
 | `release/install.bat` | 安裝程式（把翻譯檔複製到 AppData） |
 | `release/uninstall.bat` | 移除程式 |
-| `release/install-mac.command` | Mac 安裝腳本（實驗性） |
+| `release/install-mac.command` | Mac 安裝腳本 |
 | `release/uninstall-mac.command` | Mac 移除腳本 |
