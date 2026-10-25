@@ -20,11 +20,11 @@
 ### 手動安裝（不想執行 bat 的話）
 
 1. 把 `override.cfg` 放進遊戲資料夾（與 `Melvor2.exe` 同一層）。
-2. 把 `zh_TW.po` 複製到 `%APPDATA%\Games By Malcs\Melvor Idle 2\`（在檔案總管網址列貼上這個路徑即可開啟）。
+2. 把 `zh_TW.po` 和 `zh_TW_patch.gd` 複製到 `%APPDATA%\Games By Malcs\Melvor Idle 2\`（在檔案總管網址列貼上這個路徑即可開啟）。
 
 ## 移除方式
 
-執行遊戲資料夾裡的 `uninstall.bat`，或手動刪除上面兩個檔案，重開遊戲就會恢復英文。
+執行遊戲資料夾裡的 `uninstall.bat`，或手動刪除上面三個檔案，重開遊戲就會恢復英文。
 
 ## Mac 安裝方式
 
@@ -39,7 +39,7 @@
 
 ### 手動安裝
 
-1. 把 `zh_TW.po` 複製到 `~/Library/Application Support/Games By Malcs/Melvor Idle 2/`（Finder 選單「前往」>「前往資料夾」，貼上這個路徑即可開啟）。
+1. 把 `zh_TW.po` 和 `zh_TW_patch.gd` 複製到 `~/Library/Application Support/Games By Malcs/Melvor Idle 2/`（Finder 選單「前往」>「前往資料夾」，貼上這個路徑即可開啟）。
 2. 在 Steam 對遊戲按右鍵 → **管理** → **瀏覽本機檔案**，對遊戲的 `.app` 按右鍵 →「顯示套件內容」。
 3. 把 `override.cfg` 分別複製到 `Contents/MacOS/` 和 `Contents/Resources/`（兩邊都放，跟安裝腳本的做法一樣）。
 
@@ -54,14 +54,17 @@ Mac 移除方式：用同樣方式執行 `uninstall-mac.command`。
 
 遊戲使用 Godot 引擎的翻譯系統，但啟動時會強制把語系設為 `en_GB`。因此：
 
-- `override.cfg`：Godot 會讀取遊戲資料夾裡的這個檔案，讓遊戲額外載入 `user://zh_TW.po`（也就是 `%APPDATA%\Games By Malcs\Melvor Idle 2\zh_TW.po`）。
+- `override.cfg`：Godot 會讀取遊戲資料夾裡的這個檔案，讓遊戲額外載入 `user://zh_TW.po`（也就是 `%APPDATA%\Games By Malcs\Melvor Idle 2\zh_TW.po`），並在啟動時執行 `user://zh_TW_patch.gd`。
 - `zh_TW.po`：內容是中文，但語系標記為 `en_GB`，所以遊戲在「英式英文」模式下會套用它。
+- `zh_TW_patch.gd`：有些文字是遊戲程式直接顯示原文、沒經過翻譯系統（例如閃避列表的 Stab / Slash、「5 Available」、「10 minutes」、「…後Rune Essence耗盡」）。這個小腳本會在每一幀檢查畫面上的文字，用翻譯檔的內容替換成中文。
 
 因為只是額外放檔案，不會動到 `Melvor2.exe` 或存檔，Steam 驗證檔案時也不會刪除它們。
 
 ## 已知問題
 
-- 少數文字仍是英文，例如戰鬥面板閃避列表的 Stab / Slash、部分物品名稱（如「Herring」耗盡提示）、時間格式（「10 minutes」）。這些是遊戲程式直接顯示原文，沒有經過翻譯系統，翻譯檔無法處理。
+- 少數文字仍是英文，例如「符文製作 Level 35」、底部經驗列的「Level 31」。這些是遊戲用程式拼出來、混著圖示和顏色的文字，硬換會弄壞圖示，所以保留原文。
+- 遊戲用程式拼出來的純英文句子（如「此內容在試玩版中無法使用」）換成中文後，會失去原本的顏色。
+- 想找出還沒翻譯的文字：把 `zh_TW_patch.gd` 開頭的 `LOG_UNTRANSLATED` 改成 `true`，玩一陣子後，`zh_TW_untranslated.txt` 會列出畫面上仍是英文的文字。
 - 部分地名、人名、草藥名保留英文原文（如 Azamire、Penril）。
 - 遊戲仍在 alpha 階段，更新後新增的文字不會有翻譯。如果某次更新後遊戲不再強制 `en_GB`，翻譯會整個失效，需要把 `zh_TW.po` 開頭的 `Language: en_GB` 改回 `zh_TW`。
 - 翻譯初稿由 AI 協助完成，可能有用詞不自然的地方。
@@ -78,8 +81,9 @@ Mac 移除方式：用同樣方式執行 `uninstall-mac.command`。
 | 檔案 | 說明 |
 | --- | --- |
 | `release/zh_TW.po` | 翻譯檔 |
-| `release/override.cfg` | 讓遊戲載入翻譯的設定檔 |
-| `release/install.bat` | 安裝程式（把翻譯檔複製到 AppData） |
+| `release/zh_TW_patch.gd` | 執行期文字替換腳本（處理翻譯檔管不到的文字） |
+| `release/override.cfg` | 讓遊戲載入翻譯與腳本的設定檔 |
+| `release/install.bat` | 安裝程式（把翻譯檔和腳本複製到 AppData） |
 | `release/uninstall.bat` | 移除程式 |
 | `release/install-mac.command` | Mac 安裝腳本 |
 | `release/uninstall-mac.command` | Mac 移除腳本 |

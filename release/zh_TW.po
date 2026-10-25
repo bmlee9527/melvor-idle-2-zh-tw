@@ -25410,3 +25410,27 @@ msgstr "工具提示出現前的延遲時間（[秒]）。"
 msgid "Tooltip position offset in [pixels] from your cursor."
 msgstr "工具提示與游標的位置偏移（[像素]）。"
 
+
+msgid "Step Skipping Chance"
+msgstr "跳過步驟機率"
+
+msgid "This content is not available in the Demo"
+msgstr "此內容在試玩版中無法使用"
+
+msgid "Nothing lol"
+msgstr "啥都沒有 XD"
+
+msgid "Break!"
+msgstr "擊碎！"
+
+msgid "CREATE NEW CHARACTER"
+msgstr "建立新角色"
+
+msgid "IMPORT SAVE"
+msgstr "匯入存檔"
+
+msgid "Registering Entities..."
+msgstr "正在註冊實體..."
+
+msgid "Loading Entity Resources..."
+msgstr "正在載入實體資源..."

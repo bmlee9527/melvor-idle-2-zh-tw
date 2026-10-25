@@ -6,8 +6,8 @@ cd "$(dirname "$0")" || exit 1
 echo "Melvor Idle 2 Demo - 繁體中文翻譯 安裝程式（Mac）"
 echo
 
-if [ ! -f "zh_TW.po" ] || [ ! -f "override.cfg" ]; then
-  echo "[錯誤] 找不到 zh_TW.po 或 override.cfg，請確認和本檔案放在同一個資料夾。"
+if [ ! -f "zh_TW.po" ] || [ ! -f "zh_TW_patch.gd" ] || [ ! -f "override.cfg" ]; then
+  echo "[錯誤] 找不到 zh_TW.po、zh_TW_patch.gd 或 override.cfg，請確認和本檔案放在同一個資料夾。"
   exit 1
 fi
 
@@ -31,9 +31,9 @@ if [ ! -d "$APP/Contents" ]; then
   exit 1
 fi
 
-# 翻譯檔放到遊戲的使用者資料夾（user://）
+# 翻譯檔和文字替換腳本放到遊戲的使用者資料夾（user://）
 DEST="$HOME/Library/Application Support/Games By Malcs/Melvor Idle 2"
-mkdir -p "$DEST" && cp -f "zh_TW.po" "$DEST/zh_TW.po" || { echo "[錯誤] 複製翻譯檔失敗。"; exit 1; }
+mkdir -p "$DEST" && cp -f "zh_TW.po" "zh_TW_patch.gd" "$DEST/" || { echo "[錯誤] 複製翻譯檔失敗。"; exit 1; }
 
 # override.cfg 兩個位置都放（已確認此做法在 Mac 上可用）
 for d in "$APP/Contents/MacOS" "$APP/Contents/Resources"; do

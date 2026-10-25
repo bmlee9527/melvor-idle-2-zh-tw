@@ -17,7 +17,8 @@ if [ -z "$APP" ]; then
   APP="${APP%/}"
 fi
 
-rm -f "$HOME/Library/Application Support/Games By Malcs/Melvor Idle 2/zh_TW.po"
+DEST="$HOME/Library/Application Support/Games By Malcs/Melvor Idle 2"
+rm -f "$DEST/zh_TW.po" "$DEST/zh_TW_patch.gd" "$DEST/zh_TW_untranslated.txt" "$DEST/zh_TW_debug.txt"
 if [ -d "$APP/Contents" ]; then
   rm -f "$APP/Contents/MacOS/override.cfg" "$APP/Contents/Resources/override.cfg"
 fi
