@@ -6404,13 +6404,13 @@ msgid "Bait Scattering"
 msgstr "撒餌"
 
 msgid "[b]Seashade Port[/b]: Attracts countless seagulls to help distract nearby folk."
-msgstr "[b]Seashade Port[/b]：引來無數海鷗，幫忙分散附近人們的注意力。"
+msgstr "[b]海蔭港[/b]：引來無數海鷗，幫忙分散附近人們的注意力。"
 
 msgid "Rotten Fish Panic"
 msgstr "腐魚恐慌"
 
 msgid "[b]Seashade Port[/b]: Poison Fish to cause panic"
-msgstr "[b]Seashade Port[/b]：用毒魚引發恐慌"
+msgstr "[b]海蔭港[/b]：用毒魚引發恐慌"
 
 msgid "Provides protection from [b]Pests[/b] in [b]Farming[/b]. Equipped to the Farming Toolbelt."
 msgstr "在[b]農耕[/b]中提供對[b]害蟲[/b]的防護。裝備於農耕工具腰帶。"
@@ -6542,7 +6542,7 @@ msgid "Tainted Wine"
 msgstr "摻料葡萄酒"
 
 msgid "[b]Bandit Encampment[/b]: A brew to put bandits to sleep."
-msgstr "[b]強盜營地[/b]：讓強盜昏睡的釀造酒。"
+msgstr "[b]盜賊營地[/b]：讓盜賊昏睡的釀造酒。"
 
 msgid "Rare Find"
 msgstr "稀有發現"
@@ -6554,7 +6554,7 @@ msgid "Fake Arrows"
 msgstr "假箭矢"
 
 msgid "[b]Bandit Encampment[/b]: A pile of fake arrows used to swap in place of real ones."
-msgstr "[b]強盜營地[/b]：用來調包真箭的一堆假箭矢。"
+msgstr "[b]盜賊營地[/b]：用來調包真箭的一堆假箭矢。"
 
 msgid "Blood Essence"
 msgstr "血之精華"
@@ -25434,3 +25434,39 @@ msgstr "正在註冊實體..."
 
 msgid "Loading Entity Resources..."
 msgstr "正在載入實體資源..."
+
+msgid "Begin Compost"
+msgstr "開始堆肥"
+
+msgid "Proteins"
+msgstr "蛋白質"
+
+msgid "Non-Combat"
+msgstr "非戰鬥"
+
+msgid "Normal Resistance"
+msgstr "普通抗性"
+
+msgid "..."
+msgstr "……"
+
+msgid "What if we set the same scene as... the incident, have Jass's people waiting for them?"
+msgstr "如果我們重現……事發時的場景，讓 Jass 的人埋伏等著他們呢？"
+
+msgid "If this ambush goes well, they won't need to fight much. Just need to look scary and grab one or two of the Golbins to tell us where they brought the girl."
+msgstr "如果這次伏擊順利，他們就不需要怎麼戰鬥。只要看起來嚇人，然後抓一兩隻哥布林問出他們把女孩帶去哪裡就好。"
+
+msgid "As you walk back into Azamire, you feel a swell of pride at the number of newly constructed buildings. They're small, and it hardly takes you long to count them on two hands, but still, Azamire is rebuilding, bit by bit.\n\nYour delight is interrupted by a shriek as you hear a... Golbin run by, chased by the newly appointed Militia Captain - Jass. The chase doesn't last long, and Gloob is held down while Jass berates it, talking about how she's no fool and knows a trap when she sees one."
+msgstr "當你走回 Azamire 時，看著那些新蓋好的建築，你心中湧起一股自豪。它們很小，兩隻手就數得完，但無論如何，Azamire 正一點一點地重建。\n\n你的喜悅被一聲尖叫打斷，你聽見一隻……哥布林跑過，被新任命的民兵隊長——Jass——追著跑。追逐沒持續多久，Gloob 就被壓制在地，Jass 一邊斥責牠，一邊說自己可不是傻瓜，看得出什麼是陷阱。"
+
+msgid "Description"
+msgstr "說明"
+
+msgid "[img height=1.25em]{EntityIcon}[/img] Purchase [b]{CategoryName} -> {PurchaseName}[/b] in the Shop"
+msgstr "[img height=1.25em]{EntityIcon}[/img] 在商店購買 [b]{CategoryName} -> {PurchaseName}[/b]"
+
+msgid "[img height=1.25em]{EntityIcon}[/img] Purchase [b]{CategoryName} -> {PurchaseName} {Current} / {Max}[/b] times in the Shop"
+msgstr "[img height=1.25em]{EntityIcon}[/img] 在商店購買 [b]{CategoryName} -> {PurchaseName} {Current} / {Max}[/b] 次"
+
+msgid "[img height=1.25em]{EntityIcon}[/img] [b]{EntityName} Level {Level:N0}[/b]"
+msgstr "[img height=1.25em]{EntityIcon}[/img] [b]{EntityName} 等級 {Level:N0}[/b]"

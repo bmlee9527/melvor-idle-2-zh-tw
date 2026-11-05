@@ -37,6 +37,7 @@ var _last := {}       # instance_id -> 上次看到（或寫入）的文字
 var _cache := {}      # 原文 -> 替換結果
 var _seen := {}
 var _templates := {}  # 關鍵字 -> [{re, tokens, dst}]
+var _rich := {}       # 去掉 BBCode 的原文 -> 帶 BBCode 的譯文
 var _unit_re := RegEx.new()
 var _latin_re := RegEx.new()
 var _word_re := RegEx.new()
@@ -143,8 +144,11 @@ func _check(id: int) -> bool:
 	if not built and not n.is_visible_in_tree():
 		return true
 	var t := s
-	# 拼出來的富文字只能整段重寫，會失去原本的圖示和顏色，所以只處理不含中文的短句
-	if not built or (s.length() < 100 and not _cjk_re.search(s)):
+	if built and _rich.has(s.strip_edges()):
+		# 商店說明等：解析後的文字沒有標籤，對不上翻譯檔，改用去掉標籤的原文比對，譯文保留標籤
+		t = _rich[s.strip_edges()]
+	# 其他拼出來的富文字只能整段重寫，會失去原本的圖示和顏色，所以只處理不含中文的短句
+	elif not built or (s.length() < 100 and not _cjk_re.search(s)):
 		t = _convert(s)
 	if DEBUG and _dbg and not _dbg_seen.has(s) and _latin_re.search(s):
 		_dbg_seen[s] = true
@@ -311,6 +315,8 @@ func _add_template(e: Dictionary) -> void:
 	if not e.has("msgid") or e.get("msgstr", "") == "":
 		return
 	_build_template(e.msgid, e.msgstr)
+	if "[" in e.msgid and not "{" in e.msgid:
+		_rich[_tag_re.sub(e.msgid, "", true).strip_edges()] = e.msgstr
 	if e.has("msgid_plural"):
 		_build_template(e.msgid_plural, e.msgstr)
 
