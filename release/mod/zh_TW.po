@@ -68054,6 +68054,168 @@ msgstr "繁體中文"
 msgid "English, United Kingdom"
 msgstr "English (UK)"
 
+msgid "[color=#E9DFC1]Reduces [color=#FFD16D]all[/color] damage taken by a flat amount equal to the [color=#FFD16D]Armour value[/color].[/color]\n\n[color=#E9DFC1]This is the [color=#FFD16D]final[/color] damage calculation step.[/color]\n\n[color=#E9DFC1]Your [color=#FFD16D]Armour will break[/color] if the Enemy deals a hit [color=#FFD16D]equal to or higher[/color] than your Armour value.[/color]"
+msgstr "[color=#E9DFC1]讓受到的[color=#FFD16D]所有[/color]傷害減少等同[color=#FFD16D]護甲值[/color]的固定數值。[/color]\n\n[color=#E9DFC1]這是傷害計算的[color=#FFD16D]最後[/color]一步。[/color]\n\n[color=#E9DFC1]敵人單次造成的傷害[color=#FFD16D]大於或等於[/color]你的護甲值時，你的[color=#FFD16D]護甲會破碎[/color]。[/color]"
+
+msgid "Instantly cut [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [img height=1.25em]{TreeIcon}[/img] [b]{TreeName}[/b]"
+msgstr "瞬間砍倒[img height=1.25em]{TreeIcon}[/img] [b]{TreeName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Instantly cut [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] Trees/Bushes in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中瞬間砍倒樹木或灌木[b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Instantly cut [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [img height=1.25em]{TreeIcon}[/img] [b]{TreeName}[/b] in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中瞬間砍倒[img height=1.25em]{TreeIcon}[/img] [b]{TreeName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b]"
+msgstr "捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b] without failing"
+msgstr "不失敗地捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b] while using Bait"
+msgstr "使用誘餌捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b] without failing while using Bait"
+msgstr "使用誘餌且不失敗地捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b] in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b] without failing in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中不失敗地捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b] while using Bait in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中使用誘餌捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Trap [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{AnimalName} (Rare Species)[/b] without failing while using Bait in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中使用誘餌且不失敗地捕捉[b]{AnimalName}（稀有物種）[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Plant [img height=1.25em]{RecipeIcon}[/img] [b]{RecipeName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] times"
+msgstr "種植[img height=1.25em]{RecipeIcon}[/img] [b]{RecipeName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Plant [img height=1.25em]{RecipeIcon}[/img] [b]{RecipeName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中種植[img height=1.25em]{RecipeIcon}[/img] [b]{RecipeName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Observe {Current:N0} / {Max:N0} events while studying {ConstellationName} in Astrology"
+msgstr "在占星中研究{ConstellationName}時觀測 {Current:N0} / {Max:N0} 個事件"
+
+msgid "Study {ConstellationName} {Current:N0} / {Max:N0} times in Astrology"
+msgstr "在占星中研究{ConstellationName} {Current:N0} / {Max:N0} 次"
+
+msgid "Activate {Current:N0} / {Max:N0} {EventName} in Astrology"
+msgstr "在占星中啟動{EventName} {Current:N0} / {Max:N0} 次"
+
+msgid "Finish {Current:N0} / {Max:N0} {EventName} in Astrology"
+msgstr "在占星中完成{EventName} {Current:N0} / {Max:N0} 次"
+
+msgid "Observe {Current:N0} / {Max:N0} {EventName} in Astrology"
+msgstr "在占星中觀測{EventName} {Current:N0} / {Max:N0} 次"
+
+msgid "Skip {Current:N0} / {Max:N0} {EventName} in Astrology"
+msgstr "在占星中跳過{EventName} {Current:N0} / {Max:N0} 次"
+
+msgid "Observe [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{EventName}[/b] (Event)"
+msgstr "觀測[b]{EventName}[/b]（事件）[b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Observe [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] [b]{EventName}[/b] (Event) in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中觀測[b]{EventName}[/b]（事件）[b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Damage Taken (%)"
+msgstr "受到傷害 (%)"
+
+msgid "Adjustment to the damage taken when failing an obstacle"
+msgstr "調整障礙失敗時受到的傷害"
+
+msgid "Trap Success Chance (Flat)"
+msgstr "陷阱成功機率（固定）"
+
+msgid "Entry Cost Preservation Chance"
+msgstr "入場費用保留機率"
+
+msgid "Your chance to preserve the entry cost when starting a Course"
+msgstr "開始路線時保留入場費用的機率"
+
+msgid "Course Reward Quantity (%)"
+msgstr "路線獎勵數量 (%)"
+
+msgid "Adjustment to the quantity of items and currency received for completing a Course"
+msgstr "調整完成路線時獲得的物品與貨幣數量"
+
+msgid "Obstacle Reward Quantity (%)"
+msgstr "障礙獎勵數量 (%)"
+
+msgid "Adjustment to the quantity of items received from obstacles"
+msgstr "調整從障礙獲得的物品數量"
+
+msgid "Obstacle Reward Quantity (Flat)"
+msgstr "障礙獎勵數量（固定）"
+
+msgid "Increased Obstacle Reward Chance"
+msgstr "障礙獎勵機率提升"
+
+msgid "Adjustment to your chance to receive items from obstacles"
+msgstr "調整從障礙獲得物品的機率"
+
+msgid "Obstacle Reward Chance (Flat)"
+msgstr "障礙獎勵機率（固定）"
+
+msgid "Keep Obstacle Rewards on Fail"
+msgstr "失敗時保留障礙獎勵"
+
+msgid "Complete [b]{CourseName}[/b] Agility Course [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] times"
+msgstr "完成[b]{CourseName}[/b]敏捷路線[b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Complete [b]{CourseName}[/b] Agility Course [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中完成[b]{CourseName}[/b]敏捷路線[b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Agility Complete Course"
+msgstr "敏捷：完成路線"
+
+msgid "Complete an agility course a number of times"
+msgstr "完成敏捷路線達一定次數"
+
+msgid "[img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b] is equipped to {EntityName} toolbelt"
+msgstr "[img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b]已裝備於{EntityName}工具腰帶"
+
+msgid "[img height=1.25em]{ItemIcon}[/img] [b]{Current} / {Max} {ItemName}[/b] are equipped to {EntityName} toolbelt"
+msgstr "[img height=1.25em]{ItemIcon}[/img] [b]{Current} / {Max} 個{ItemName}[/b]已裝備於{EntityName}工具腰帶"
+
+msgid "[img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b] is NOT equipped to {EntityName} toolbelt"
+msgstr "[img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b][b]未[/b]裝備於{EntityName}工具腰帶"
+
+msgid "Complete [img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] time"
+msgstr "完成[img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Complete [img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] times"
+msgstr "完成[img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Complete [img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] time in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中完成[img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Complete [img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
+msgstr "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中完成[img height=1.25em]{DungeonIcon}[/img] [b]{DungeonName}[/b] [b][color=#{ProgressColor}]{Current:N0} / {Max:N0}[/color][/b]次"
+
+msgid "Fighting in [color=#FFD16D]{AreaName}[/color]:"
+msgstr "在[color=#FFD16D]{AreaName}[/color]戰鬥時："
+
+msgid "Reach Level"
+msgstr "達到等級"
+
+msgid "Spend {Current:N0} / {Max:N0} {ItemName} in {EntityName}"
+msgstr "在{EntityName}中花費 {Current:N0} / {Max:N0} 個{ItemName}"
+
+msgid "Action Is Active"
+msgstr "行動進行中"
+
+msgid "Requires the action to be active"
+msgstr "需要該行動正在進行"
+
+msgid "Don't Save"
+msgstr "不儲存"
+
+msgid "Open Recent"
+msgstr "開啟最近的檔案"
+
 msgid "Chinese (Taiwan)"
 msgstr "繁體中文"
 
