@@ -48667,7 +48667,7 @@ msgstr "工具提示延遲"
 
 #: Settings/interface_settings_view.tscn
 msgid "The delay in [seconds] for a Tooltip to appear."
-msgstr "工具提示出現前的延遲時間（[秒]）。"
+msgstr "工具提示出現前的延遲時間（秒）。"
 
 #: Settings/interface_settings_view.tscn
 msgid "Tooltip Offset"
@@ -48675,7 +48675,7 @@ msgstr "工具提示偏移"
 
 #: Settings/interface_settings_view.tscn
 msgid "Tooltip position offset in [pixels] from your cursor."
-msgstr "工具提示與游標的位置偏移（[像素]）。"
+msgstr "工具提示與游標的位置偏移（像素）。"
 
 #: Settings/interface_settings_view.tscn
 msgid "Mastery Guild"
@@ -68215,6 +68215,192 @@ msgstr "不儲存"
 
 msgid "Open Recent"
 msgstr "開啟最近的檔案"
+
+msgid "Change Character Name"
+msgstr "更改角色名稱"
+
+msgid "View Character Stats"
+msgstr "查看角色數值"
+
+msgid "Base Max Hit:"
+msgstr "基礎最大傷害："
+
+msgid "Flat Modifier:"
+msgstr "固定加成："
+
+msgid "Percent Modifier:"
+msgstr "百分比加成："
+
+msgid "Combat Triangle:"
+msgstr "戰鬥三角："
+
+msgid "On Hit Reductions"
+msgstr "命中時的減免"
+
+msgid "Enemy Armour:"
+msgstr "敵人護甲："
+
+msgid "Max Possible Hit:"
+msgstr "最大可能傷害："
+
+msgid "Recipes, if any, go here. Many items will have alternate recipes."
+msgstr "這裡列出配方（如果有的話）。許多物品有多種配方。"
+
+msgid "Uses go here. Unique uses will be marked \"complete\""
+msgstr "這裡列出用途。獨特用途會標示為「完成」"
+
+msgid "Sources go here. Unique sources will be marked \"Complete\""
+msgstr "這裡列出來源。獨特來源會標示為「完成」"
+
+msgid "Statistics that are tracked will be listed here"
+msgstr "追蹤中的統計資料會列在這裡"
+
+msgid "Requirements / Recommendations"
+msgstr "需求 / 建議"
+
+msgid "Complete Obstacle Courses"
+msgstr "完成障礙路線"
+
+msgid "Train Agility by attempting Obstacle Courses. Each Obstacle has a chance to succeed. Failing an Obstacle restarts the Course."
+msgstr "挑戰障礙路線來訓練敏捷。每個障礙都有成功機率，任一障礙失敗就要從頭開始路線。"
+
+msgid "Obstacle Failure"
+msgstr "障礙失敗"
+
+msgid "[color=orange_red]Failing an Obstacle deals damage to you[/color]. Equip Food to automatically heal and survive repeated attempts."
+msgstr "[color=orange_red]障礙失敗會對你造成傷害[/color]。裝備食物可以自動回復生命，撐過反覆挑戰。"
+
+msgid "Train Techniques"
+msgstr "訓練技巧"
+
+msgid "Train different Agility Techniques within their respective Training Categories to improve your ability to overcome Obstacles."
+msgstr "在各自的訓練分類中訓練不同的敏捷技巧，提升克服障礙的能力。"
+
+msgid "Obstacle Difficulty"
+msgstr "障礙難度"
+
+msgid "Your Technique Level compared to an Obstacle's Difficulty determines your chance of success. Some Obstacles, such as Traps, have a fixed success chance instead."
+msgstr "你的技巧等級和障礙難度的差距決定成功機率。部分障礙（例如陷阱）則是固定的成功機率。"
+
+msgid "[color=green]Find special Map items[/color] throughout the game to unlock Unique Trails. Completing these Trails grants access to powerful new content."
+msgstr "在遊戲中[color=green]尋找特殊的地圖物品[/color]來解鎖獨特小徑。完成這些小徑就能進入強大的新內容。"
+
+msgid "Earn Agility Marks (Item)"
+msgstr "獲得敏捷印記（物品）"
+
+msgid "Completing Agility Courses can reward Marks, which can be spent in the Agility Shop for valuable items."
+msgstr "完成敏捷路線可以獲得印記，能在敏捷商店兌換珍貴的物品。"
+
+msgid "Discover Unique Trails"
+msgstr "探索獨特小徑"
+
+msgid "Train in Arenas"
+msgstr "在競技場訓練"
+
+msgid "Take on Agility Arenas to earn special rewards that can be spent in the Agility Shop."
+msgstr "挑戰敏捷競技場來獲得特殊獎勵，可以在敏捷商店使用。"
+
+msgid "Create Potions"
+msgstr "製作藥水"
+
+msgid "Use Herbs from Farming and other ingredients to create Potions that provide powerful bonuses to various skills."
+msgstr "用農耕種出的草藥和其他材料製作藥水，為各種技能提供強力加成。"
+
+msgid "Potion Potency"
+msgstr "藥水效力"
+
+msgid "Each Potion has a Potency. Higher Potencies provide stronger bonuses when consumed."
+msgstr "每種藥水都有效力，效力越高，飲用時的加成越強。"
+
+msgid "Potion Classes"
+msgstr "藥水類型"
+
+msgid "Potions have two Classes: A and B. Each Class provides different bonuses, allowing you to choose what best suits your needs."
+msgstr "藥水分為 A、B 兩種類型，各自提供不同的加成，讓你依需求選擇。"
+
+msgid "Potion Tiers"
+msgstr "藥水階級"
+
+msgid "Unlock higher Potion Tiers, such as Super Potions, which combine the bonuses of previous Tiers into one powerful Potion."
+msgstr "解鎖更高的藥水階級，例如超級藥水，把前幾個階級的加成合而為一。"
+
+msgid "Comparing to:"
+msgstr "比較對象："
+
+msgid "(Cycle Loadous with TAB)"
+msgstr "（按 TAB 切換配裝）"
+
+msgid "Study Constellations"
+msgstr "研究星座"
+
+msgid "Study Constellations to gain Knowledge. Each Constellation is associated with specific skills."
+msgstr "研究星座來獲得知識。每個星座都和特定技能相關。"
+
+msgid "Unlock Major & Minor Nodes"
+msgstr "解鎖主要與次要節點"
+
+msgid "Gain enough Knowledge to unlock Major and Minor Nodes, granting permanent bonuses and new unlocks for their associated skills."
+msgstr "累積足夠的知識來解鎖主要與次要節點，為相關技能提供永久加成和新的解鎖內容。"
+
+msgid "Observe Rare Events"
+msgstr "觀測稀有事件"
+
+msgid "Discover rare events, such as Meteor Showers and Falling Stars, to unlock or access  additional content throughout the game."
+msgstr "發現流星雨、星落等稀有事件，以解鎖或進入遊戲中的更多內容。"
+
+msgid "Show Combat Header Button in Legacy Mode"
+msgstr "經典模式下顯示戰鬥頂部按鈕"
+
+msgid "Whether to show the Combat Navigation button in the game's header while using Legacy Sidebar"
+msgstr "使用經典側邊欄時，是否在遊戲頂部顯示戰鬥導覽按鈕"
+
+msgid "Select NPC Icon"
+msgstr "選擇 NPC 圖示"
+
+msgid "Name this NPC"
+msgstr "為這個 NPC 命名"
+
+msgid "You cannot change your character name here."
+msgstr "你無法在這裡更改角色名稱。"
+
+msgid "Backstory / Naming Help"
+msgstr "背景故事 / 命名提示"
+
+msgid "You can edit this at any time."
+msgstr "你隨時都可以修改。"
+
+msgid "Customise NPC"
+msgstr "自訂 NPC"
+
+msgid "Technique Name"
+msgstr "技巧名稱"
+
+msgid "Reset your Skill Levels to 60?"
+msgstr "要把技能等級重設為 60 嗎？"
+
+msgid "During the Demo, Skills were capped at Level 60, but XP could still be earned beyond this limit."
+msgstr "試玩版中技能等級上限為 60，但超過上限仍可繼續累積經驗。"
+
+msgid "With Early Access, this extra XP may cause Skills to jump several levels, skipping unlocks and the intended progression."
+msgstr "進入搶先體驗版後，這些多出的經驗可能讓技能一口氣跳好幾級，略過解鎖內容和原本設計的進度。"
+
+msgid "We recommend resetting to Level 60 for a more natural progression experience, but this is not required."
+msgstr "建議重設為 60 級，進度體驗會比較自然，但這不是必要的。"
+
+msgid "Only Skills with XP above Level 60 will be affected. All other progress will remain unchanged."
+msgstr "只有經驗超過 60 級的技能會受影響，其他進度都不會改變。"
+
+msgid "Would you like to reset your Skill XP above Level 60?"
+msgstr "要重設超過 60 級的技能經驗嗎？"
+
+msgid "Yes, reset to level 60 (Hold to confirm)"
+msgstr "是，重設為 60 級（按住確認）"
+
+msgid "Yes, reset to level 60"
+msgstr "是，重設為 60 級"
+
+msgid "No, keep my XP"
+msgstr "不，保留我的經驗"
 
 msgid "Chinese (Taiwan)"
 msgstr "繁體中文"
