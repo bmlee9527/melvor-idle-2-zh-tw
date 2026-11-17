@@ -36,6 +36,8 @@ var _hot := {}        # 每幀檢查的 instance_id
 var _sets := {}       # instance_id -> 被腳本改寫的次數
 var _last := {}       # instance_id -> 上次看到（或寫入）的文字
 var _orig := {}       # instance_id -> 被改寫前的英文，切回英文時還原用
+var _popups := {}     # 彈出選單 instance_id -> PopupMenu
+var _popup_orig := {} # 彈出選單 instance_id -> {選項索引: 英文}
 var _active := false  # 目前遊戲語言是不是繁體中文
 var _cache := {}      # 原文 -> 替換結果
 var _seen := {}
@@ -89,6 +91,7 @@ func _process(_delta: float) -> void:
 			_restore_all()
 	if not _active:
 		return
+	_refresh_popups()
 	if not DEBUG:
 		_refresh()
 		return
@@ -118,7 +121,14 @@ func _restore_all() -> void:
 			n.append_text(o)
 		elif cur == _last.get(id, ""):
 			n.text = o
+	for pid in _popup_orig.keys():
+		var p = instance_from_id(pid)
+		if p is PopupMenu:
+			for i in _popup_orig[pid]:
+				if i < p.item_count:
+					p.set_item_text(i, _popup_orig[pid][i])
 	_orig.clear()
+	_popup_orig.clear()
 	_last.clear()
 	_hot.clear()
 	_sets.clear()
@@ -136,6 +146,34 @@ func _track(n: Node) -> void:
 		if not _nodes.has(id):
 			_nodes[id] = n
 			_fresh.append(id)
+	elif n is PopupMenu:
+		# 彈出選單的選項不是文字元件（例如左下角的追蹤時段「1 hour」），打開時才翻譯
+		_popups[n.get_instance_id()] = n
+
+
+# 遊戲可能在打開選單的同時才填入選項，所以每幀檢查開著的選單（數量很少）
+func _refresh_popups() -> void:
+	for id in _popups.keys():
+		var p = _popups[id]
+		if not is_instance_valid(p):
+			_popups.erase(id)
+			_popup_orig.erase(id)
+		elif p.visible:
+			_translate_popup(p)
+
+
+func _translate_popup(p: PopupMenu) -> void:
+	var id := p.get_instance_id()
+	var orig: Dictionary = _popup_orig.get(id, {})
+	for i in p.item_count:
+		var s := p.get_item_text(i)
+		var t := _convert(s)
+		if t != s:
+			if not _cjk_re.search(s):
+				orig[i] = s
+			p.set_item_text(i, t)
+	if not orig.is_empty():
+		_popup_orig[id] = orig
 
 
 func _refresh() -> void:

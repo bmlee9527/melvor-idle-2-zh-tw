@@ -68375,6 +68375,12 @@ msgstr "自訂 NPC"
 msgid "Technique Name"
 msgstr "技巧名稱"
 
+msgid "Required"
+msgstr "必要"
+
+msgid "Recommended"
+msgstr "建議"
+
 msgid "Reset your Skill Levels to 60?"
 msgstr "要把技能等級重設為 60 嗎？"
 
