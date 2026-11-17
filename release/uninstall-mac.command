@@ -1,11 +1,11 @@
 #!/bin/bash
-# Melvor Idle 2 Demo 繁體中文翻譯 - macOS 移除腳本
+# Melvor Idle 2 繁體中文翻譯 - macOS 移除腳本
 # 用法：打開「終端機」，輸入 bash 加一個空格，把這個檔案拖進視窗後按 Enter。
 
-echo "Melvor Idle 2 Demo - 繁體中文翻譯 移除程式（Mac）"
+echo "Melvor Idle 2 - 繁體中文翻譯 移除程式（Mac）"
 echo
 
-GAME_DIR="$HOME/Library/Application Support/Steam/steamapps/common/Melvor Idle 2 Demo"
+GAME_DIR="$HOME/Library/Application Support/Steam/steamapps/common/Melvor Idle 2"
 APP=""
 if [ -d "$GAME_DIR" ]; then
   APP="$(find "$GAME_DIR" -maxdepth 1 -name '*.app' -print -quit)"

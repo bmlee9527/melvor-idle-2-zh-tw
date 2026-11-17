@@ -1,13 +1,14 @@
 extends Node
-# Melvor Idle 2 Demo 繁體中文翻譯 - 執行期文字替換
+# Melvor Idle 2 繁體中文翻譯 - 執行期文字替換
 # 遊戲有些文字是程式直接顯示原文、沒經過翻譯系統，翻譯檔管不到。
 # 這個腳本在每次畫面繪製前檢查 Label / RichTextLabel / Button 的文字，
 # 能在翻譯檔裡找到對應中文的就換掉，並處理數字樣板、時間單位、逗號列表等格式。
+# 只在遊戲語言設為繁體中文時動作；切回英文時，把改過的文字還原成原文。
 
 # 設成 true 會把仍是英文的文字記到 user://zh_TW_untranslated.txt，方便補翻譯
 const LOG_UNTRANSLATED := false
 const LOG_PATH := "user://zh_TW_untranslated.txt"
-const PO_PATH := "user://zh_TW.po"
+const PO_NAME := "zh_TW.po"
 # 除錯用：記錄每段英文文字的節點類型與替換結果
 const DEBUG := false
 const DEBUG_PATH := "user://zh_TW_debug.txt"
@@ -34,6 +35,8 @@ var _cold_pos := 0
 var _hot := {}        # 每幀檢查的 instance_id
 var _sets := {}       # instance_id -> 被腳本改寫的次數
 var _last := {}       # instance_id -> 上次看到（或寫入）的文字
+var _orig := {}       # instance_id -> 被改寫前的英文，切回英文時還原用
+var _active := false  # 目前遊戲語言是不是繁體中文
 var _cache := {}      # 原文 -> 替換結果
 var _seen := {}
 var _templates := {}  # 關鍵字 -> [{re, tokens, dst}]
@@ -74,6 +77,18 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	var zh := TranslationServer.get_locale().begins_with("zh")
+	if zh != _active:
+		_active = zh
+		if zh:
+			# 剛切到中文：全部重新檢查
+			_last.clear()
+			_fresh.append_array(_cold)
+			_cold.clear()
+		else:
+			_restore_all()
+	if not _active:
+		return
 	if not DEBUG:
 		_refresh()
 		return
@@ -86,6 +101,27 @@ func _process(_delta: float) -> void:
 		_dbg.flush()
 		_dbg_frames = 0
 		_dbg_usec = 0
+
+
+# 切回英文：仍顯示腳本寫入文字的元件改回原文；遊戲自己翻譯的部分由遊戲重繪
+func _restore_all() -> void:
+	for id in _orig.keys():
+		var n = _nodes.get(id)
+		if n == null or not is_instance_valid(n):
+			continue
+		var cur: String = n.text
+		if n is RichTextLabel and cur == "":
+			cur = n.get_parsed_text()
+		var o: String = _orig[id]
+		if n is RichTextLabel and n.text == "":
+			n.clear()
+			n.append_text(o)
+		elif cur == _last.get(id, ""):
+			n.text = o
+	_orig.clear()
+	_last.clear()
+	_hot.clear()
+	_sets.clear()
 
 
 func _track_tree(n: Node) -> void:
@@ -127,6 +163,7 @@ func _check(id: int) -> bool:
 	if n == null or not is_instance_valid(n):
 		_nodes.erase(id)
 		_last.erase(id)
+		_orig.erase(id)
 		_hot.erase(id)
 		_sets.erase(id)
 		return false
@@ -155,6 +192,8 @@ func _check(id: int) -> bool:
 		_dbg.store_line("%s|%s|%s|%s => %s" % [n.get_class(), n.can_auto_translate(), built, s.c_escape(), t.c_escape()])
 		_dbg.flush()
 	if t != s:
+		if not _cjk_re.search(s):
+			_orig[id] = s
 		if built:
 			n.clear()
 			n.append_text(t)
@@ -251,9 +290,17 @@ func _match_template(s: String) -> String:
 			if m == null:
 				continue
 			var out: String = tpl.dst
+			var ok := true
 			for i in tpl.tokens.size():
-				out = out.replace(tpl.tokens[i], _tr(m.get_string(i + 1)))
-			return out
+				var v := m.get_string(i + 1)
+				var tv := _tr(v)
+				# 「Level {0}」不該吃下整句「Level up your …」：佔位符抓到沒翻譯的英文句子就不算符合
+				if tv == v and v.count(" ") >= 2 and _latin_re.search(v):
+					ok = false
+					break
+				out = out.replace(tpl.tokens[i], tv)
+			if ok:
+				return out
 	return s
 
 
@@ -279,7 +326,13 @@ func _replace_runs_plain(s: String) -> String:
 
 # 從翻譯檔讀出含 {…} 佔位符的條目，轉成正規表示式樣板
 func _load_templates() -> void:
-	var f := FileAccess.open(PO_PATH, FileAccess.READ)
+	# Windows 版的翻譯檔在遊戲資料夾的 mod 裡；Mac 版放在使用者資料夾（user://）
+	var f: FileAccess = null
+	for p in [OS.get_executable_path().get_base_dir().path_join("mod").path_join(PO_NAME),
+			"res://mod/" + PO_NAME, "user://" + PO_NAME]:
+		f = FileAccess.open(p, FileAccess.READ)
+		if f != null:
+			break
 	if f == null:
 		return
 	var cur := {}
