@@ -4,7 +4,7 @@
 
 > ⚠️ 本翻譯為**非官方**玩家作品，與 Games By Malcs 無關。遊戲文字版權屬於原開發者，請勿用於商業用途。
 
-- 適用版本：Melvor Idle 2 `v0.11.6-alpha.1`（Steam 搶先體驗版，Windows / Mac）
+- 適用版本：Melvor Idle 2 `v0.11.7-alpha`（Steam 搶先體驗版，Windows / Mac）
 - 翻譯條目：約 14,000 條（介面、物品、技能、主線劇情、戰鬥說明等）
 
 ## 安裝方式（Windows）
