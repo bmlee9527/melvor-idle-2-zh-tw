@@ -54586,7 +54586,7 @@ msgstr "[b]{EntityName}[/b]處於啟動狀態"
 #: Components/Actions/Conditions/ItemOwnedCondition.cs.uid
 msgid "Own [img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b]"
 msgid_plural "Own [img height=1.25em]{ItemIcon}[/img] [b]{Current} / {Max} {ItemName}[/b]"
-msgstr[0] "擁有[img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b]"
+msgstr[0] "擁有[img height=1.25em]{ItemIcon}[/img] [b]{Current} / {Max} {ItemName}[/b]"
 
 #: Components/Actions/Conditions/MaxCurrencyOwnedCondition.cs.uid
 msgid "Have [img height=1.25em]{CurrencyIcon}[/img] [b]{Current} / {Max} {CurrencyName}[/b] remaining"
@@ -55462,7 +55462,7 @@ msgstr "在{2.Entity.DisplayName}中完成{0:F0} / {1:F1}個配方"
 #: Components/Equipment/Conditions/ItemEquippedCondition.cs.uid
 msgid "[img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b] is equipped"
 msgid_plural "[img height=1.25em]{ItemIcon}[/img] [b]{Current} / {Max} {ItemName}[/b] are equipped"
-msgstr[0] "已裝備[img height=1.25em]{ItemIcon}[/img] [b]{ItemName}[/b]"
+msgstr[0] "已裝備[img height=1.25em]{ItemIcon}[/img] [b]{Current} / {Max} {ItemName}[/b]"
 
 #: Components/Equipment/Conditions/NoWeaponEquippedCondition.cs.uid
 msgid "No weapon is equipped"
@@ -55814,7 +55814,7 @@ msgstr "已啟動"
 #: Components/Shop/ShopPurchaseCondition.cs.uid
 msgid "[img height=1.25em]{EntityIcon}[/img] Purchase [b]{CategoryName} -> {PurchaseName}[/b] in the Shop"
 msgid_plural "[img height=1.25em]{EntityIcon}[/img] Purchase [b]{CategoryName} -> {PurchaseName} {Current} / {Max}[/b] times in the Shop"
-msgstr[0] "[img height=1.25em]{EntityIcon}[/img] 在商店購買 [b]{CategoryName} -> {PurchaseName}[/b]"
+msgstr[0] "[img height=1.25em]{EntityIcon}[/img] 在商店購買 [b]{CategoryName} -> {PurchaseName}[/b] [b]{Current} / {Max}[/b] 次"
 
 #: Components/SkillCompletion/SkillCompletionCondition.cs.uid
 msgid "[b]{CategoryName}[/b] Skill Completion [b]{Current:0.##%} / {Max:0.##%}[/b]"
@@ -56216,7 +56216,7 @@ msgstr "在{0.Entity.DisplayName}中完成的敏捷路線數"
 #: Entities/Agility/Statistics/AgilityCourseCompletedStatistic.cs.uid
 msgid "Complete [b]{CourseName}[/b] once in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
 msgid_plural "Complete [b]{CourseName} {Current:N0} / {Max:N0}[/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
-msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中完成一次[b]{CourseName}[/b]"
+msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中完成[b]{CourseName}[/b] [b]{Current:N0} / {Max:N0}[/b] 次"
 
 #: Entities/Agility/Statistics/AgilityCoursesCompletedStatistic.cs.uid
 msgid "Agility Courses Completed"
@@ -59197,7 +59197,7 @@ msgstr "在{0.Entity.DisplayName}中動作失敗的次數"
 #: Entities/Thieving/Statistics/FailedThievingActionStatistic.cs.uid
 msgid "Fail to steal from [b]{RecipeName}[/b] once in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
 msgid_plural "Fail to steal from [b]{RecipeName} {Current:N0} / {Max:N0}[/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
-msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中向[b]{RecipeName}[/b]行竊，失敗一次"
+msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中向[b]{RecipeName}[/b]行竊失敗 [b]{Current:N0} / {Max:N0}[/b] 次"
 
 #: Entities/Thieving/Statistics/SuccessfulThievingActionsStatistic.cs.uid
 msgid "Successful Thieving Attempts"
@@ -59214,7 +59214,7 @@ msgstr "在{0.Entity.DisplayName}中動作成功的次數"
 #: Entities/Thieving/Statistics/SuccessfulThievingActionStatistic.cs.uid
 msgid "Successfully steal from [b]{RecipeName}[/b] once in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
 msgid_plural "Successfully steal from [b]{RecipeName} {Current:N0} / {Max:N0}[/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
-msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中從[b]{RecipeName}[/b]處成功行竊一次"
+msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中從[b]{RecipeName}[/b]處成功行竊 [b]{Current:N0} / {Max:N0}[/b] 次"
 
 #: Entities/Thieving/Statistics/ThievingDamageAvoidedStatistic.cs.uid
 msgid "Damage avoided in {0.Entity.DisplayName}"
@@ -59239,7 +59239,7 @@ msgstr "在{0.Entity.DisplayName}中避開暈眩的次數"
 #: Entities/Thieving/Statistics/ThievingStunAvoidedStatistic.cs.uid
 msgid "Avoid a stun by [b]{RecipeName}[/b] once in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
 msgid_plural "Avoid a stun by [b]{RecipeName} {Current:N0} / {Max:N0}[/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
-msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中避開[b]{RecipeName}[/b]造成的暈眩一次"
+msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中避開[b]{RecipeName}[/b]造成的暈眩 [b]{Current:N0} / {Max:N0}[/b] 次"
 
 #: Entities/Thieving/Statistics/ThievingStunnedCountStatistic.cs.uid
 msgid "Times Stunned in {0.Entity.DisplayName}"
@@ -59248,7 +59248,7 @@ msgstr "在{0.Entity.DisplayName}中陷入暈眩的次數"
 #: Entities/Thieving/Statistics/ThievingStunnedCountStatistic.cs.uid
 msgid "Get stunned by [b]{RecipeName}[/b] once in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
 msgid_plural "Get stunned by [b]{RecipeName} {Current:N0} / {Max:N0}[/b] times in [img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]"
-msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中被[b]{RecipeName}[/b]擊暈一次"
+msgstr[0] "在[img height=1.25em]{EntityIcon}[/img] [b]{EntityName}[/b]中被[b]{RecipeName}[/b]擊暈 [b]{Current:N0} / {Max:N0}[/b] 次"
 
 #: Entities/Thieving/Statistics/ThievingStunnedTimeSpentStatistic.cs.uid
 msgid "Time Spent Stunned"
